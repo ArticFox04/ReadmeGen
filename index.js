@@ -1,6 +1,6 @@
-// TODO: Include packages needed for this application
 const inquirer = require('inquirer');
-// TODO: Create an array of questions for user input
+const fs = require('fs');
+
 const questions = [
 {
     type: 'input',
@@ -31,7 +31,7 @@ const questions = [
     type: 'list',
     message: 'Which license would you like to select?',
     name: 'license',
-    choices: ['MIT License','Apache License 2.0','GNU General Public License v2.0', 'MIT', 'Boost Software License 1.0', 'None']
+    choices: ['MIT','Apache 2.0','GNU General Public v2.0', 'None']
   },
   {
     type: 'input',
@@ -46,7 +46,9 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+
+}
 
 // TODO: Create a function to initialize app
 function init() {}
