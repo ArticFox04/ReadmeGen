@@ -32,8 +32,23 @@ else if(license === 'none') {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
-`;
+    console.log(data)
+  return `# ${data.title}\n
+## Table of Contents: 
+[Description](#description)\n
+[Installation](#installation)\n
+[Usage](#usage)\n
+[Contributions](#contributions)\n
+[License](#license)\n
+[Questions](#questions)\n
+## Description: \n${data.description}\n
+## Installation: \n${data.installation}\n
+## Usage: \n${data.usage}\n
+## Contributions: \n${data.contributions}\n
+## License: \n${renderLicenseBadge(data.license)}\n
+${renderLicenseLink(data.license)}\n
+## Questions: \nGithub Username: https://github.com/${data.username}\n
+\nEmail: ${data.email}\n`;
 }
 
 module.exports = generateMarkdown;
