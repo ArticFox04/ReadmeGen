@@ -11,7 +11,7 @@ const questions = [
   {
     type: 'input',
     name: 'description',
-    message: 'Provide a description of your application.',
+    message: 'Provide a description the application.',
   },
   {
     type: 'input',
@@ -30,7 +30,7 @@ const questions = [
   },
   {
     type: 'list',
-    message: 'Which license would you like to select?',
+    message: 'Which license would you like to use?',
     name: 'license',
     choices: ['MIT','Apache 2.0','GNU General Public v2.0', 'None']
   },
@@ -42,7 +42,7 @@ const questions = [
   {
     type: 'input',
     name: 'email',
-    message: 'What is your email address?'
+    message: 'What is your email?'
   },
 ];
 
@@ -54,7 +54,7 @@ function init(){
 
     .then((data) => {
         fs.writeFile("readMe.md", generateMarkdown(data), (err) =>
-  err ? console.log(err) : console.log('README created!'));
+  err ? console.log(err) : console.log('README has been created!'));
     })
 }
 
